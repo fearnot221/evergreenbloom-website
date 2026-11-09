@@ -30,7 +30,7 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
-          VITE_PWA_URL: ${{ vars.VITE_PWA_URL }}
+          VITE_GAME_URL: ${{ vars.VITE_GAME_URL }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

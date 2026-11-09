@@ -6,8 +6,8 @@ import { sitePaths } from './src/app/site-paths';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
-  if (env.VITE_PWA_URL) {
-    const url = new URL(env.VITE_PWA_URL);
+  if (env.VITE_GAME_URL) {
+    const url = new URL(env.VITE_GAME_URL);
     if (
       url.protocol !== 'https:' ||
       url.pathname !== '/' ||
@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
       url.username ||
       url.password
     )
-      throw new Error('VITE_PWA_URL must be an HTTPS origin, without a path or credentials');
+      throw new Error('VITE_GAME_URL must be an HTTPS origin, without a path or credentials');
   }
   return {
     base: env.VITE_BASE_PATH || '/',
