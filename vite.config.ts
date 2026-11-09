@@ -30,6 +30,10 @@ export default defineConfig(({ mode }) => {
             fs.mkdirSync(dir, { recursive: true });
             fs.writeFileSync(path.join(dir, 'index.html'), html);
           }
+          fs.mkdirSync('dist/demo', { recursive: true });
+          for (const file of ['index.html', 'main.js', 'style.css']) {
+            fs.copyFileSync(path.join('demo', file), path.join('dist/demo', file));
+          }
           fs.writeFileSync('dist/404.html', html);
           fs.writeFileSync('dist/.nojekyll', '');
         },

@@ -1,7 +1,7 @@
 # 松櫻祭 · 官網
 
 Public information and the campus-map prototype. React / TypeScript / Vite; static
-GitHub Pages deployment only. Game PWA: https://github.com/fearnot221/evergreenbloom-pwa
+GitHub Pages deployment only. Game PWA: https://github.com/fearnot221/evergreenbloom-game
 (separate build, Docker deployment). Content and official-brand boundaries remain
 prototype/TBD; this is not yet the official university website.
 
@@ -19,12 +19,17 @@ No application server, database or game service is required to read the website.
 The public 3D map still loads on demand. Known route entry HTML is generated during
 build, so Pages can serve direct links; this does not prerender React content.
 
+## 視覺展示版
+
+松櫻祭視覺展示版的原始碼在 [demo/](demo/README.md)，隨官網發布至
+[展示版頁面](https://fearnot221.github.io/evergreenbloom-website/demo/)。
+
 ## GitHub Pages
 
 Repository Settings → Pages → Source: **GitHub Actions**. `.github/workflows/pages.yml`
 checks, builds, uploads `dist` and deploys on main pushes or manual dispatch. Its
 `configure-pages` output selects the correct base for either project Pages or a custom
-domain. Default address: https://fearnot221.github.io/evergreenbloom/
+domain. Default address: https://fearnot221.github.io/evergreenbloom-website/
 
 Optional repository Actions variable `VITE_PWA_URL`: the game's public HTTPS origin,
 for example `https://play.example.org` (example only, not an assigned address).
@@ -37,7 +42,7 @@ Use the new game origin for all newly printed QR codes.
 Local build settings are listed in `.env.example`:
 
 ```sh
-VITE_BASE_PATH=/evergreenbloom/ npm run build
+VITE_BASE_PATH=/evergreenbloom-website/ npm run build
 ```
 
 Both direct map-data downloads and JS fetches honor this base. Assets referenced

@@ -1,6 +1,6 @@
 # evergreenbloom-demo
 
-松櫻祭視覺風格確認用的純前端 demo（無建置、無依賴）。線上版：https://fearnot221.github.io/evergreenbloom-demo/
+松櫻祭視覺風格確認用的純前端 demo（無建置、無依賴）。線上版：https://fearnot221.github.io/evergreenbloom-website/demo/
 
 本機預覽：
 
