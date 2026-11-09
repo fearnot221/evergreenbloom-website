@@ -8,7 +8,7 @@ one-origin/installable-official-site descriptions below; those remain historical
 - `fearnot221/evergreenbloom-website` (this repository): static React/Vite official-site
   prototype, deployed only to GitHub Pages. Public information, map and `/play`
   introduction remain here. No login, game implementation, install manifest or
-  offline-save UI. `VITE_PWA_URL` configures the independent game origin; when absent
+  offline-save UI. `VITE_GAME_URL` configures the independent game origin; when absent
   the page says the app URL has not been announced.
 - `fearnot221/evergreenbloom-game`: independently built game PWA, deployed through
   Docker Compose/Nginx. Owns `/game`, `/play` installation/privacy and `/stamp/:spot`.

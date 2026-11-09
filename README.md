@@ -31,7 +31,7 @@ checks, builds, uploads `dist` and deploys on main pushes or manual dispatch. It
 `configure-pages` output selects the correct base for either project Pages or a custom
 domain. Default address: https://fearnot221.github.io/evergreenbloom-website/
 
-Optional repository Actions variable `VITE_PWA_URL`: the game's public HTTPS origin,
+Optional repository Actions variable `VITE_GAME_URL`: the game's public HTTPS origin,
 for example `https://play.example.org` (example only, not an assigned address).
 Leave empty until hosting is ready: `/play` displays that the URL is not announced.
 After setting it, rerun the Pages deployment. QR claims arriving via the old

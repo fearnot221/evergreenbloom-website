@@ -19,12 +19,12 @@ describe('website deployment boundary', () => {
     expect(new Set(sitePaths).size).toBe(sitePaths.length);
   });
   it('has no dead game destination before hosting is configured', async () => {
-    vi.stubEnv('VITE_PWA_URL', '');
+    vi.stubEnv('VITE_GAME_URL', '');
     const { gameHref } = await import('../src/data/deployment');
     expect(gameHref('?spot=lake&k=LAKE-26')).toBeNull();
   });
   it('preserves a QR claim in the external app link', async () => {
-    vi.stubEnv('VITE_PWA_URL', 'https://game.example/');
+    vi.stubEnv('VITE_GAME_URL', 'https://game.example/');
     const { gameHref } = await import('../src/data/deployment');
     expect(gameHref('?spot=lake&k=LAKE-26')).toBe('https://game.example/play?spot=lake&k=LAKE-26');
   });

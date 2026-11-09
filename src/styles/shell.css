@@ -671,10 +671,6 @@ body:has(.tab-bar) {
   transform: rotate(180deg);
 }
 
-.footer-app .pwa-panel {
-  padding-bottom: var(--space-5);
-}
-
 /* 緞帶: the closing band, full width, set larger than the inner-page ribbons. */
 .footer-ribbon {
   margin-top: var(--space-9);
