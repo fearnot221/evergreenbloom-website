@@ -13,6 +13,7 @@ export const sitePaths = [
   '/play',
   '/partners',
   '/donate',
+  '/privacy',
   '/news',
   '/game',
   ...snapshot.events.map((event) => `/events/${event.id}`),
