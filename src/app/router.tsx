@@ -53,7 +53,6 @@ export const routes: RouteObject[] = [
           { path: 'play', lazy: page(() => import('../pages/PlayPage')) },
           { path: 'partners', lazy: page(() => import('../pages/PartnersPage')) },
           { path: 'donate', lazy: page(() => import('../pages/DonatePage')) },
-          { path: 'privacy', lazy: page(() => import('../pages/PrivacyPage')) },
           { path: 'game', loader: ({ request }) => gameEntry(new URL(request.url).search) },
           // QR codes on site point here: /stamp/<spot>?k=<key>.
           {

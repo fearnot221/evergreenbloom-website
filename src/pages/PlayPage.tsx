@@ -104,13 +104,7 @@ export default function PlayPage() {
           <li>如果照片裡不小心拍到人，該照片只供集章確認，不會另作使用。</li>
           <li>目前的版本不會上傳照片；照片留在你的手機上。</li>
         </ul>
-        <p className="note">
-          完整說明請見
-          <Link className="text-link" to="/privacy">
-            隱私權政策
-          </Link>
-          。
-        </p>
+        <p className="note">正式隱私權政策待主辦單位確認後公布。</p>
       </section>
     </Page>
   );
